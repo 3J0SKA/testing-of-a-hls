@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HLS Stream Player</title>
+    <!-- Include Video.js CSS -->
+    <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
+
+    <!-- Include Video.js and videojs-contrib-hls scripts -->
+    <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/videojs-contrib-hls@5.15.0/dist/videojs-contrib-hls.min.js"></script>
+</head>
+<body>
+    <div>
+        <!-- Video.js player -->
+        <video id="hls-player" class="video-js vjs-default-skin" controls autoplay preload="auto" width="800" height="600">
+            <!-- Add your HLS stream URL here -->
+            <source src="hhamza_tryna_loop.m3u8" type="application/x-mpegURL">
+        </video>
+    </div>
+
+    <script>
+        // Initialize Video.js player
+        var player = videojs('hls-player');
+
+        // Enable HLS playback using videojs-contrib-hls plugin
+        player.hls();
+    </script>
+</body>
+</html>
